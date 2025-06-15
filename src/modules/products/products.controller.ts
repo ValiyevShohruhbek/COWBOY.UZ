@@ -51,6 +51,8 @@ export class ProductsController {
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
+    console.log(id);
+
     return await this.productsService.findOne(+id);
   }
 
